@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google - Profil Perusahaan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Google Logo">
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#profile" class="nav-link">Our Profile</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#message" class="nav-link">Message Us</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="welcome-input">
+                    <label for="userName">Masukkan Nama Anda:</label>
+                    <input type="text" id="userName" placeholder="Nama Anda">
+                    <button onclick="setWelcomeMessage()">Set Nama</button>
+                </div>
+                <h1 class="welcome-message">Hi <span id="displayName">Tamu</span>, Selamat Datang di Website Google</h1>
+                <p class="hero-subtitle">Mengorganisir informasi dunia dan membuatnya dapat diakses dan berguna secara universal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="profile">
+        <div class="container">
+            <div class="profile-banner">
+                <img src="img/google-banner.png" alt="Google Headquarters" class="banner-image">
+                <div class="banner-overlay">
+                    <h2>Tentang Google</h2>
+                </div>
+            </div>
+            
+            <div class="profile-content">
+                <div class="about-section">
+                    <h3>Tentang Perusahaan</h3>
+                    <p>Google LLC adalah perusahaan teknologi multinasional Amerika yang berspesialisasi dalam layanan dan produk terkait Internet, yang meliputi teknologi periklanan online, mesin pencari, komputasi awan, perangkat lunak, dan perangkat keras. Google didirikan pada tahun 1998 oleh Larry Page dan Sergey Brin saat mereka masih mahasiswa PhD di Stanford University di California.</p>
+                    
+                    <p>Perusahaan ini berkembang pesat dan kini menjadi salah satu perusahaan teknologi terbesar di dunia dengan lebih dari 150.000 karyawan di seluruh dunia. Google berkomitmen untuk membuat informasi dunia dapat diakses dan berguna bagi semua orang.</p>
+                </div>
+
+                <div class="vision-mission">
+                    <div class="vision">
+                        <h3>Visi</h3>
+                        <p>Menyediakan akses ke informasi dunia dalam satu klik untuk semua orang di mana pun mereka berada.</p>
+                    </div>
+                    <div class="mission">
+                        <h3>Misi</h3>
+                        <p>Mengorganisir informasi dunia dan membuatnya dapat diakses dan berguna secara universal. Kami percaya bahwa informasi yang paling relevan dan dapat diandalkan harus tersedia bagi semua orang.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>PRODUK KAMI</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <img src="img/search.png" alt="Google Search">
+                    <h4>Google Search</h4>
+                    <p>Mesin pencari terdepan di dunia</p>
+                </div>
+                <div class="product-item">
+                    <img src="img/gmail.png" alt="Gmail">
+                    <h4>Gmail</h4>
+                    <p>Layanan email gratis dan aman</p>
+                </div>
+                <div class="product-item">
+                    <img src="img/drive.png" alt="Google Drive">
+                    <h4>Google Drive</h4>
+                    <p>Penyimpanan cloud dan kolaborasi</p>
+                </div>
+                <div class="product-item">
+                    <img src="img/youtube.png" alt="YouTube">
+                    <h4>YouTube</h4>
+                    <p>Platform berbagi video terbesar</p>
+                </div>
+                <div class="product-item">
+                    <img src="img/maps.png" alt="Google Maps">
+                    <h4>Google Maps</h4>
+                    <p>Navigasi dan peta digital</p>
+                </div>
+                <div class="product-item">
+                    <img src="img/android.png" alt="Android">
+                    <h4>Android</h4>
+                    <p>Sistem operasi mobile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Headquarters Section -->
+    <section class="headquarters">
+        <div class="container">
+            <h2>Kantor Pusat Kami</h2>
+            <div class="headquarters-grid">
+                <div class="hq-item">
+                    <div class="hq-circle">
+                        <img src="img/kantor-usa.png" alt="Mountain View">
+                    </div>
+                    <h4>Mountain View</h4>
+                    <p>California, USA</p>
+                </div>
+                <div class="hq-item">
+                    <div class="hq-circle">
+                        <img src="img/kantor-london.png" alt="London">
+                    </div>
+                    <h4>London</h4>
+                    <p>United Kingdom</p>
+                </div>
+                <div class="hq-item">
+                    <div class="hq-circle">
+                        <img src="img/kantor-singapore.png" alt="Singapore">
+                    </div>
+                    <h4>Singapore</h4>
+                    <p>Asia Pacific</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message" class="message-section">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <div class="message-content">
+                <div class="form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Kirim</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div class="contact-item">
+                        <strong>Alamat:</strong>
+                        <p>1600 Amphitheatre Parkway<br>Mountain View, CA 94043<br>United States</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Telepon:</strong>
+                        <p>+1 (650) 253-0000</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <p>info@google.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Website:</strong>
+                        <p>www.google.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Submission Display -->
+    <div id="submissionDisplay" class="submission-display" style="display: none;">
+        <div class="submission-content">
+            <h3>Data yang Dikirim:</h3>
+            <div id="submittedData"></div>
+            <button onclick="closeSubmissionDisplay()" class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Google LLC. Semua hak dilindungi undang-undang.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
