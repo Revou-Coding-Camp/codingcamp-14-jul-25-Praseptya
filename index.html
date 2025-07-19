@@ -10,6 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+      <!-- Welcome Modal -->
+    <div id="welcomeModal" class="welcome-modal">
+        <div class="welcome-modal-content">
+            <div class="welcome-logo">
+                <img src="img/logo.png" alt="Google Logo">
+            </div>
+            <h2>Selamat Datang</h2>
+            <p>Silakan masukkan nama Anda untuk melanjutkan</p>
+            <div class="welcome-form">
+                <input type="text" id="welcomeNameInput" placeholder="Masukkan nama Anda" required>
+                <button onclick="enterWebsite()" id="enterBtn">Masuk Website</button>
+            </div>
+            <div class="welcome-error" id="welcomeError"></div>
+        </div>
+    </div>
+
+    <div class="website-content">
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -36,11 +53,6 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="welcome-input">
-                    <label for="userName">Masukkan Nama Anda:</label>
-                    <input type="text" id="userName" placeholder="Nama Anda">
-                    <button onclick="setWelcomeMessage()">Set Nama</button>
-                </div>
                 <h1 class="welcome-message">Hi <span id="displayName">Tamu</span>, Selamat Datang di Website Google</h1>
                 <p class="hero-subtitle">Mengorganisir informasi dunia dan membuatnya dapat diakses dan berguna secara universal</p>
             </div>
@@ -221,7 +233,7 @@
             <p>&copy; 2025 Google LLC. Semua hak dilindungi undang-undang.</p>
         </div>
     </footer>
-
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

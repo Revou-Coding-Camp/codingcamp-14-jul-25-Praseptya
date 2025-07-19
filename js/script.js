@@ -1,10 +1,84 @@
 // Global variables
 let currentUser = "Tamu"
+let isWebsiteEntered = false
 
 // DOM Content Loaded
 document.addEventListener("DOMContentLoaded", () => {
-  initializeApp()
+  showWelcomeModal()
 })
+
+// Show welcome modal
+function showWelcomeModal() {
+  const modal = document.getElementById("welcomeModal")
+  const websiteContent = document.querySelector(".website-content")
+
+  modal.style.display = "flex"
+  websiteContent.style.display = "none"
+
+  // Focus on input
+  const nameInput = document.getElementById("welcomeNameInput")
+  setTimeout(() => nameInput.focus(), 500)
+
+  // Handle Enter key
+  nameInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      enterWebsite()
+    }
+  })
+}
+
+// Enter website function
+function enterWebsite() {
+  const nameInput = document.getElementById("welcomeNameInput")
+  const errorDiv = document.getElementById("welcomeError")
+  const enterBtn = document.getElementById("enterBtn")
+  const name = nameInput.value.trim()
+
+  // Clear previous error
+  errorDiv.textContent = ""
+
+  // Validate name
+  if (name === "") {
+    errorDiv.textContent = "Nama harus diisi!"
+    nameInput.focus()
+    return
+  }
+
+  if (name.length < 2) {
+    errorDiv.textContent = "Nama minimal 2 karakter!"
+    nameInput.focus()
+    return
+  }
+
+  if (!/^[a-zA-Z\s]+$/.test(name)) {
+    errorDiv.textContent = "Nama hanya boleh berisi huruf dan spasi!"
+    nameInput.focus()
+    return
+  }
+
+  // Disable button and show loading
+  enterBtn.disabled = true
+  enterBtn.textContent = "Memuat..."
+
+  // Set user name
+  currentUser = name
+  document.getElementById("displayName").textContent = currentUser
+
+  // Hide modal and show website
+  setTimeout(() => {
+    document.getElementById("welcomeModal").style.display = "none"
+    document.querySelector(".website-content").style.display = "block"
+    isWebsiteEntered = true
+
+    // Initialize app after entering
+    initializeApp()
+
+    // Show welcome notification
+    setTimeout(() => {
+      showNotification(`Selamat datang, ${currentUser}!`, "success")
+    }, 500)
+  }, 1000)
+}
 
 // Initialize application
 function initializeApp() {
@@ -13,21 +87,10 @@ function initializeApp() {
   setupMobileMenu()
 }
 
-// Set welcome message
+// Set welcome message (simplified)
 function setWelcomeMessage() {
-  const userNameInput = document.getElementById("userName")
-  const displayName = document.getElementById("displayName")
-
-  if (userNameInput.value.trim() !== "") {
-    currentUser = userNameInput.value.trim()
-    displayName.textContent = currentUser
-    userNameInput.value = ""
-
-    // Show success message
-    showNotification("Nama berhasil diatur!", "success")
-  } else {
-    showNotification("Silakan masukkan nama Anda!", "error")
-  }
+  // This function is no longer needed as name is set on entry
+  showNotification("Nama sudah diatur saat masuk website!", "info")
 }
 
 // Setup smooth scrolling navigation
@@ -294,6 +357,9 @@ function showNotification(message, type) {
         }
         .notification.error {
             background: #ea4335;
+        }
+        .notification.info {
+            background: #4285f4;
         }
         @keyframes slideIn {
             from {
